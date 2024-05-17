@@ -36,9 +36,9 @@ You should start by extracting the private key and certificate(s) from the PKCS#
 > 6. Single Sign-On service URL: `https://innrita.staging.samleiki.fo/idp/profile/SAML2/Redirect/SSO`
 > 7. Single logout service URL: `https://innrita.staging.samleiki.fo/idp/profile/SAML2/Redirect/SLO`
 #### Production environment
-> 5. Identity provider entity ID: `https://innrita.staging.samleiki.fo/idp/shibboleth`
-> 6. Single Sign-On service URL: `https://innrita.staging.samleiki.fo/idp/profile/SAML2/Redirect/SSO`
-> 7. Single logout service URL: `https://innrita.staging.samleiki.fo/idp/profile/SAML2/Redirect/SLO`
+> 5. Identity provider entity ID: `https://innrita.samleiki.fo/idp/shibboleth`
+> 6. Single Sign-On service URL: `https://innrita.samleiki.fo/idp/profile/SAML2/Redirect/SSO`
+> 7. Single logout service URL: `https://innrita.samleiki.fo/idp/profile/SAML2/Redirect/SLO`
 8. Backchannel logout: `Off`
 9. Send 'id_token_hint' in logout requests: `On`
 10. Send 'client_id' in logout requests: `Off`
