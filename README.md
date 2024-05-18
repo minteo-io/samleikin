@@ -2,6 +2,8 @@
 
 This guide will help you get up and running with `Samleikin`.
 
+There is a repository with relevant info from [Klintra](https://www.klintra.fo) available at [https://bitbucket.org/klintra-ft/sp-demo/src/master/](https://bitbucket.org/klintra-ft/sp-demo/src/master/)
+
 ## Preconditions
 - Signed agreement with [Talgildu Føroyar](https://www.samleikin.fo)
 - Received PKCS#12 bundle from [Elektron](https://elektron.fo)
