@@ -86,4 +86,58 @@ Extract the private key and certificate(s) from the PKCS#12 bundle into separate
 37. First login flow override: `create user` 
 38. Post login flow: `None`
 39. Sync mode: `Force
-40. Save
+40. Add/Save
+
+### Mappers
+
+1. Identity providers -> Samleikin -> Mappers -> Add mapper
+2. Name: `givenName`
+3. Sync mode override: `Inherit`
+4. Mapper type: `Attribute importer`
+5. Attribute Name: `urn:oid:2.5.4.42`
+6. Friendly Name: `givenName`
+7. Name Format: `ATTRIBUTE_FORMAT_URI`
+8. User Attribute Name: `firstName`
+
+Repeat adding mappers for:
+
+#### sn
+
+    Name: sn
+    Attribute Name: urn:oid:2.5.4.4
+    Friendly Name: sn
+    User Attribute Name: lastName
+
+#### displayName
+
+    Name: displayName
+    Attribute Name: urn:oid:2.16.840.1.113730.3.1.241
+    Friendly Name: displayName
+    User Attribute Name: displayName (Custom Attribute...)
+
+#### countryOfCitizenship
+
+    Name: countryOfCitizenship
+    Attribute Name: urn:oid:1.3.6.1.5.5.7.9.4
+    Friendly Name: countryOfCitizenship
+    User Attribute Name: countryOfCitizenship (Custom Attribute...)
+
+#### dateOfBirth
+
+    Name: dateOfBirth
+    Attribute Name: urn:oid:1.3.6.1.5.5.7.9.1
+    Friendly Name: dateOfBirth
+    User Attribute Name: dateOfBirth (Custom Attribute...)
+
+#### displayName
+
+    Name: personalIdentityNumber
+    Attribute Name: urn:oid:1.2.208.189.1.2.1
+    Friendly Name: personalIdentityNumber
+    User Attribute Name: personalIdentityNumber (Custom Attribute...)
+
+## Metadata to Samleikin
+
+You must provide a metadata XML file to Samleikin. 
+
+Locate this file by navigating to: Identity providers -> Samleikin -> `SAML 2.0 Service Provider Metadata`
