@@ -25,17 +25,28 @@ You should start by extracting the private key and certificate(s) from the PKCS#
 6. Realm settings -> User profile -> `firstName` -> Required field: `Off`
 7. Realm settings -> User profile -> `lastName` -> Required field: `Off`
 
+### Authentication
+
+1. Authentication -> Flows -> Create flow
+2. Name: `create user`
+3. Flow type: `Basic flow`
+4. Create
+5. Add execution -> `Create user if unique` -> Add
+6. `Create user if unique` -> Requirement: `Alternative`
+
 ### Identity providers
 
+#### General settings
 1. Identity providers -> Add provider -> SAML v2.0
 2. Alias: `samleikin`
 3. Display name: `Samleikin`
 4. Service provider entity ID: `https://[KEYCLOAK_URL]/realms/samleikin`
-#### Staging environment
+#### SAML settings
+##### Staging environment
 > 5. Identity provider entity ID: `https://innrita.staging.samleiki.fo/idp/shibboleth`
 > 6. Single Sign-On service URL: `https://innrita.staging.samleiki.fo/idp/profile/SAML2/Redirect/SSO`
 > 7. Single logout service URL: `https://innrita.staging.samleiki.fo/idp/profile/SAML2/Redirect/SLO`
-#### Production environment
+##### Production environment
 > 5. Identity provider entity ID: `https://innrita.samleiki.fo/idp/shibboleth`
 > 6. Single Sign-On service URL: `https://innrita.samleiki.fo/idp/profile/SAML2/Redirect/SSO`
 > 7. Single logout service URL: `https://innrita.samleiki.fo/idp/profile/SAML2/Redirect/SLO`
@@ -57,5 +68,20 @@ You should start by extracting the private key and certificate(s) from the PKCS#
 23. Force authentication: `Off`
 24. Validate Signatures: `On`
 25. Use metadata descriptor URL: `Off`
-26. Use metadata descriptor URL: `[SAMLEIKIN_SIGNING_CERT]`
-
+26. Validating X509 certificates: `[SAMLEIKIN_SIGNING_CERT]`
+27. Sign service provider metadata: `Off`
+28. Pass subject: `Off`
+29. Allowed clock skew: `180` 
+30. Attribute Consuming Service Index: `0`
+#### Requested AuthnContext Constraints
+31. Comparison: `exact`
+#### Advanced settings
+32. Store tokens: `Off`
+33. Stored tokens readable: `Off`
+34. Trust Email: `Off`
+35. Account linking only: `Off`
+36. Hide on login page: `Off`
+37. First login flow override: `create user` 
+38. Post login flow: `None`
+39. Sync mode: `Force
+40. Save
