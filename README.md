@@ -1,19 +1,19 @@
-# Samleikin
+# Samleikin Setup Guide
 
-This guide will help you get up and running with `Samleikin`.
+This document provides technical instructions for the installation and configuration of `Samleikin`.
 
-There is a repository with relevant info from [Klintra](https://www.klintra.fo) available at [https://bitbucket.org/klintra-ft/sp-demo/src/master/](https://bitbucket.org/klintra-ft/sp-demo/src/master/)
+A repository containing relevant information from [Klintra](https://www.klintra.fo) is available at [https://bitbucket.org/klintra-ft/sp-demo/src/master/](https://bitbucket.org/klintra-ft/sp-demo/src/master/).
 
-## Preconditions
-- Signed agreement with [Talgildu Føroyar](https://www.samleikin.fo)
-- Received PKCS#12 bundle from [Elektron](https://elektron.fo)
-- [Keycloak 24](https://www.keycloak.org) up and running and accessible from the internet
+## Prerequisites
+- A signed agreement with [Talgildu Føroyar](https://www.samleikin.fo).
+- A PKCS#12 bundle obtained from [Elektron](https://elektron.fo).
+- An operational and internet-accessible [Keycloak 24](https://www.keycloak.org) instance.
 
-## Tools
-[Keystore Explorer](https://keystore-explorer.org)
+## Required Tools
+- [Keystore Explorer](https://keystore-explorer.org)
 
-## Setup
-You should start by extracting the private key and certificate(s) from the PKCS#12 to separate files. This can be done using `Keystore Explorer`.
+## Setup Instructions
+Extract the private key and certificate(s) from the PKCS#12 bundle into separate files using `Keystore Explorer`.
 
 ## Keycloak 24 configuration
 
