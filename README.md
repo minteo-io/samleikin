@@ -129,7 +129,7 @@ Repeat adding mappers for:
     Friendly Name: dateOfBirth
     User Attribute Name: dateOfBirth (Custom Attribute...)
 
-#### displayName
+#### personalIdentityNumber
 
     Name: personalIdentityNumber
     Attribute Name: urn:oid:1.2.208.189.1.2.1
